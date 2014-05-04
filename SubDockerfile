@@ -1,0 +1,7 @@
+FROM ladtech:ruby.2.1.1
+#ENV PATH $PATH:/usr/local/rvm/bin 
+WORKDIR /page_magic
+
+#COMMAND rvm in /page_magic do bundle install --path /gems
+#ENTRYPOINT ["/bin/bash"]
+

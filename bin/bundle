@@ -1,0 +1,6 @@
+C=''
+for i in "$@";do 
+    C="$C '${i//\"/\\\"}'"
+done;
+command="docker run -i -e BUNDLE_PATH=/gems -t -v /home/team/Projects/page_magic:/page_magic:rw -v /tmp/gems:/gems:rw 545e0b918e33 /bin/bash -l -c \"bundle ${C}\""
+eval $command
